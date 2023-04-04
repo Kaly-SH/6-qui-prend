@@ -1,11 +1,11 @@
 # 6-qui-prend
 Projet de jeu de carte multijoueur en ligne
 
-Inspi : 
+## Inspi : 
 - https://www.regledujeu.fr/6-qui-prend/
 - https://codenames.game/
 
-
+## Règles du jeu :
 - Nombre de joueur de 2 à 10
 - Nombre de carte 104
 - Points sur les cartes allant de 1 à 7
