@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import { useState } from 'react'
 import Home from './pages/Home'
 import './App.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './config/router'
+import UserProvider from './contexts/User/UserProviders'
+
 
 function App() {
-
+  
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <UserProvider>
+          <RouterProvider router={router} />
+      </UserProvider>
     </div>
   )
 }

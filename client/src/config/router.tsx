@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
-import CreateRoom from "../components/Room/CreateRoom";
-import RoomLayout from "../components/Room/RoomLayout";
-import Room from "../components/Room/Room";
+import CreateRoom from "../pages/CreateRoom";
+import RoomLayout from "../components/Layout/RoomLayout";
+import Room from "../pages/Room";
 
 
-const Router = createBrowserRouter([
+export const Router = createBrowserRouter([
 
     {
         path: "/",
@@ -23,11 +23,11 @@ const Router = createBrowserRouter([
                 element: <div>Room</div>,
             },
             {
-                path: "/room/:id",
+                path: ":id",
                 element: <Room />,
             },
             {
-                path: "/room/create",
+                path: "create",
                 element: <CreateRoom />,
             }
         ]
