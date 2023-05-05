@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
   text-align: center;
+  width: 100rem;
+  height: 100rem;
+  background-color: rgba(25, 25, 25, 1);
 }
 
 .logo {
@@ -33,10 +34,47 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
+}
+
+/* CARD */
+
+.card {
+  position: relative;
+  height: 200px;
+  width: 120px;
+  border: solid 10px white;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.card-zone-value {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  /* border: solid 1px red; */
+}
+
+.card-value {
+    margin: 20px;
+    color: white;
+}
+
+.card-zone-point {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  /* border: solid 1px red; */
+}
+
+.card-point {
+    color: white;
 }
