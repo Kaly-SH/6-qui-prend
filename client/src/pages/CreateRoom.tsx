@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import useWebSocket from "react-use-websocket";
+import useWebSocket, { ReadyState } from "react-use-websocket";
 import randomWords from 'random-words';
 
 interface CreateRoomProps {
@@ -8,23 +8,9 @@ interface CreateRoomProps {
     serverUrl: string;
 }
 
-function CreateRoom({ onLogin,serverUrl } : CreateRoomProps) {
+function CreateRoom() {
 
     const navigate = useNavigate();
-
-    const [username, setUsername] = useState('');
-
-    useWebSocket(serverUrl, {
-        share: true,
-        filter: () => false
-    });
-
-    function logInUser() {
-        if(!username.trim()) {
-          return;
-        }
-        onLogin && onLogin(username);
-    };
     
     function CreateRoomWithId() {
         const roomId = randomWords({ exactly: 3, join: '-' });
@@ -33,7 +19,6 @@ function CreateRoom({ onLogin,serverUrl } : CreateRoomProps) {
     }
       
     const handleClick = () => {
-        logInUser();
         CreateRoomWithId();
     };
 
@@ -43,7 +28,7 @@ function CreateRoom({ onLogin,serverUrl } : CreateRoomProps) {
             <input name="username" onInput={(e: React.FormEvent<HTMLInputElement>) => setUsername(e.currentTarget.value)} className="form-control"/>
             <div>
                 <button type="button"
-                onClick={handleClick}
+                onClick={() =>handleClick()}
                 className="btn btn-primary account__btn">Créer une partie</button>
             </div>
         
