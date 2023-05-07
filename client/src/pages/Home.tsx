@@ -1,12 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import  Card  from '../components/Game/Card'
+// import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
 
+const num = 33; 
+
     return (
-        <div>
-            <h1>6 QUI PREND</h1>
-            <Link to="/room/create">JOUER</Link>
+        <div> 
+            <Card val={num}/>
+            {/* <h1>6 QUI PREND</h1>
+            <Link to="/room/create">JOUER</Link> */}
+           
         </div>
     );
 };
