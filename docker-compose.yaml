@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  react:
+    build: ./client/
+    ports:
+      - "80:80"
+    volumes:
+      - ./client:/app
+    restart: unless-stopped

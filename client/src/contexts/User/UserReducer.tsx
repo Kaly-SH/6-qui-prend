@@ -1,11 +1,10 @@
 import { Action } from "../../types/ActionType";
 import { User } from "../../types/Usertype";
+import React from "react";
 
 
 export enum UserActionType {
     SET_USERNAME = 'SET_USERNAME',
-    GET_USERNAME = 'GET_USERNAME',
-    EDIT_USERNAME = 'EDIT_USERNAME',
 }
 
 export interface UserState {
@@ -17,35 +16,25 @@ export interface UserState {
 export const defaultUserState: UserState = {
     user: {
         username: '',
+        hand: [],
+        score: [],
     },
     isLogged: false,
     setIsLogged: () => {},
 };
 
-export const userReducer = (state: UserState, action: Action<UserActionType>) => {
+export const userReducer = (state: UserState, action: Action<UserActionType>): UserState => {
     switch (action.type) {
-        case UserActionType.SET_USERNAME:
-            return {
-                ...state,
-                user: {
-                    username: action.payload,
-                },
-            };
-        case UserActionType.GET_USERNAME:
-            return {
-                ...state,
-                user: {
-                    username: action.payload,
-                },
-            };
-        case UserActionType.EDIT_USERNAME:
-            return {
-                ...state,
-                user: {
-                    username: action.payload,
-                },
-            };
-        default:
-            return state;
+      case UserActionType.SET_USERNAME:
+        return {
+          ...state,
+          user: {
+            ...state.user,
+            username: action.payload
+          }
+        };
+      default:
+        return state;
     }
-}
+  }
+  

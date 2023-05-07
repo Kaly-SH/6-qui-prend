@@ -9,10 +9,10 @@ export const UserContext = createContext<[UserState, Dispatch<Action<UserActionT
 ]);
 
 const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
-    const [state, dispatch] = useReducer(userReducer, defaultUserState);
+    const [UserState, UserDispatch] = useReducer(userReducer, defaultUserState);
 
     return (
-        <UserContext.Provider value={[state, dispatch]}>
+        <UserContext.Provider value={[UserState, UserDispatch]}>
             {children}
         </UserContext.Provider>
     );
