@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface CardProps {
-    val:int;
+    val:number;
 };
 
 function Card({val}:CardProps) {
