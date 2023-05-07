@@ -8,9 +8,9 @@ function Room() {
     const [State] = useContext(UserContext);
     const username = State.user.username;
     return (
-        { username ? <Game/> : <CreateRoom/> }
-        
+        // { username ? <Game/> : <CreateRoom/> }
+        <p></p>
     );
-}
+};
 
 export default Room;

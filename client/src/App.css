@@ -48,23 +48,48 @@
   background-color: cornflowerblue;
   border-radius: 5px;
   margin: 20px;
+  box-shadow: 0px 0px 5px 1px black;
+}
+
+.card:hover {
+  transform: 
+    scale(1.1)
+    translateY(-20px);
 }
 
 .card-zone-value {
   position: absolute;
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
   /* border: solid 1px red; */
 }
 
 .card-value {
-    margin: 20px;
-    color: white;
+  position: absolute;
+  margin: 10px;
+  color: white;
 }
+
+.card-value:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+
+.card-value:nth-child(2) {
+  right: 0;
+  top: 0;
+}
+
+.card-value:nth-child(3) {
+  left: 0;
+  bottom: 0;
+}
+
+.card-value:nth-child(4) {
+  right: 0;
+  bottom: 0;
+}
+
 
 .card-zone-point {
   position: absolute;
@@ -77,4 +102,12 @@
 
 .card-point {
     color: white;
+}
+
+.card-in-deck:not(:first-child) {
+  margin-left: -100px;
+}
+
+.deck-container{
+  display:inline-flex;
 }
