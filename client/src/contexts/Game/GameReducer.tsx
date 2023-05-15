@@ -1,4 +1,5 @@
 import { Deck } from "../../types/DeckType";
+import { Card } from "../../types/CardType";
 import { Action } from "../../types/ActionType";
 import { Game } from "../../types/GameType";
 import { CreateDeck } from "../../helper/GameHelper";

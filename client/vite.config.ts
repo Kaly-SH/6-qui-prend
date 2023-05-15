@@ -10,7 +10,7 @@ export default defineConfig({
     },
     host: true,
     strictPort: true,
-    port: 80,
+    port: 8080,
   },
   define: {
     'process.env': {}

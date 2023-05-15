@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>6 QUI PRENDS</title>
   </head>
+  <script type="module">
+    import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
+  </script>
+  <script type="module" src="/src/services/WebSocketClient.ts"></script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
